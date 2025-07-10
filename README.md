@@ -5,11 +5,13 @@
    cd poligonos
    
 2. Cambiar de rama:
-- git checkout main
-- git checkout poligon1
-- git checkout poligon2
-- git checkout poligon3
-- git checkout poligon4
+   ```bash
+   git checkout main
+   git checkout poligon1
+   git checkout poligon2
+   git checkout poligon3
+   git checkout poligon4
 
 3. Ejecutar con Cargo:
-cargo run
+   ```bash
+   cargo run
