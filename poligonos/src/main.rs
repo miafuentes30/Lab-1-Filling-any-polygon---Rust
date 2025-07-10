@@ -1,3 +1,5 @@
+// Poligono 1
+
 use image::{ImageBuffer, RgbImage, Rgb};
 
 type Point = (i32, i32);
