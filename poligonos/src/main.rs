@@ -75,12 +75,14 @@ fn draw_line(x0: i32, y0: i32, x1: i32, y1: i32, image: &mut RgbImage, color: Rg
 fn main() {
     let mut image: RgbImage = ImageBuffer::new(800, 600);
 
-    let poly1 = vec![
-        (165, 380), (185, 360), (180, 330), (207, 345), (233, 330),
-        (230, 360), (250, 380), (220, 385), (205, 410), (193, 383)
+    let poly2 = vec![
+        (321, 335),
+        (288, 286),
+        (339, 251),
+        (374, 302),
     ];
 
-    draw_polygon(&poly1, &mut image, Rgb([255, 255, 0]), Rgb([255, 255, 255]));
+    draw_polygon(&poly2, &mut image, Rgb([0, 0, 255]), Rgb([255, 255, 255]));
 
     image.save("out.png").unwrap();
 }
