@@ -1,3 +1,5 @@
+// Poligono 3
+
 use image::{ImageBuffer, RgbImage, Rgb};
 
 type Point = (i32, i32);
@@ -75,14 +77,13 @@ fn draw_line(x0: i32, y0: i32, x1: i32, y1: i32, image: &mut RgbImage, color: Rg
 fn main() {
     let mut image: RgbImage = ImageBuffer::new(800, 600);
 
-    let poly2 = vec![
-        (321, 335),
-        (288, 286),
-        (339, 251),
-        (374, 302),
+    let poly3 = vec![
+        (377, 249),
+        (411, 197),
+        (436, 249),
     ];
 
-    draw_polygon(&poly2, &mut image, Rgb([0, 0, 255]), Rgb([255, 255, 255]));
+    draw_polygon(&poly3, &mut image, Rgb([255, 0, 0]), Rgb([255, 255, 255]));
 
     image.save("out.png").unwrap();
 }
