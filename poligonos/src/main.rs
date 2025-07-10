@@ -95,5 +95,6 @@ fn main() {
     // Dibujar el poligono 5 negro
     draw_polygon(&poly5, &mut image, Rgb([0, 0, 0]), Rgb([255, 255, 255]));
 
-    image.save("out.png").unwrap();
+    image.save("out.bmp").unwrap();
+
 }
