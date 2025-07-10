@@ -1,4 +1,4 @@
-// Poligono 3
+// Poligono 4 y 5
 
 use image::{ImageBuffer, RgbImage, Rgb};
 
@@ -75,15 +75,25 @@ fn draw_line(x0: i32, y0: i32, x1: i32, y1: i32, image: &mut RgbImage, color: Rg
 }
 
 fn main() {
-    let mut image: RgbImage = ImageBuffer::new(800, 600);
+    let mut image: RgbImage = ImageBuffer::from_pixel(800, 600, Rgb([0, 0, 0]));
 
-    let poly3 = vec![
-        (377, 249),
-        (411, 197),
-        (436, 249),
+    // Poligono 4
+    let poly4 = vec![
+        (413, 177), (448, 159), (502, 88), (553, 53), (535, 36), (676, 37), (660, 52),
+        (750, 145), (761, 179), (672, 192), (659, 214), (615, 214), (632, 230),
+        (580, 230), (597, 215), (552, 214), (517, 144), (466, 180)
     ];
 
-    draw_polygon(&poly3, &mut image, Rgb([255, 0, 0]), Rgb([255, 255, 255]));
+    // Poligono 5
+    let poly5 = vec![
+        (682, 175), (708, 120), (735, 148), (739, 170)
+    ];
+
+    // Dibujar y rellenar el poligono 4
+    draw_polygon(&poly4, &mut image, Rgb([0, 255, 0]), Rgb([255, 255, 255]));
+
+    // Dibujar el poligono 5 negro
+    draw_polygon(&poly5, &mut image, Rgb([0, 0, 0]), Rgb([255, 255, 255]));
 
     image.save("out.png").unwrap();
 }
