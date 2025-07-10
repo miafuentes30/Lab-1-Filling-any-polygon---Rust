@@ -81,6 +81,7 @@ fn main() {
     ];
 
     draw_polygon(&poly1, &mut image, Rgb([255, 255, 0]), Rgb([255, 255, 255]));
-
-    image.save("out.png").unwrap();
+    
+    image.save("out.bmp").unwrap();
+    image.save("out.png").unwrap(); // Lo coloque para visualizar las imagenes desde el git más facil
 }
