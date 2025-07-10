@@ -5,14 +5,14 @@ type Point = (i32, i32);
 fn draw_polygon(polygon: &[Point], image: &mut RgbImage, fill_color: Rgb<u8>, border_color: Rgb<u8>) {
     let height = image.height() as i32;
 
-    // Dibujar bordes
+    // bordes
     for i in 0..polygon.len() {
         let (x0, y0) = polygon[i];
         let (x1, y1) = polygon[(i + 1) % polygon.len()];
         draw_line(x0, y0, x1, y1, image, border_color);
     }
 
-    // Rellenar (scanline)
+    // relleno
     let min_y = polygon.iter().map(|(_, y)| *y).min().unwrap_or(0);
     let max_y = polygon.iter().map(|(_, y)| *y).max().unwrap_or(height);
 
